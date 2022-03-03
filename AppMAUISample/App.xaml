@@ -1,0 +1,65 @@
+﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppMAUISample"
+             x:Class="AppMAUISample.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="PrimaryColor">#512bdf</Color>
+            <Color x:Key="SecondaryColor">White</Color>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="FontFamily" Value="OpenSansRegular" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}" />
+                <Setter Property="FontFamily" Value="OpenSansRegular" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="Padding" Value="14,10" />
+            </Style>
+
+            <Style x:Key="EntryStackStyle" TargetType="VerticalStackLayout">
+                <Setter Property="Margin" Value="10 0"/>
+            </Style>
+
+            <Style x:Key="EntryLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="0 0 5 0" />
+            </Style>
+
+            <Style x:Key="InvalidEntryStyle" TargetType="Entry">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Margin" Value="0 0 0 3" />
+            </Style>
+
+            <Style x:Key="TableHeader" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="RoyalBlue"/>
+                <Setter Property="ColumnSpacing" Value="25"/>
+                <Setter Property="RowSpacing" Value="25"/>
+                <Setter Property="Padding" Value="10"/>
+            </Style>
+            <Style x:Key="TableRows" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="LightSteelBlue"/>
+                <Setter Property="ColumnSpacing" Value="25"/>
+                <Setter Property="RowSpacing" Value="25"/>
+                <Setter Property="Padding" Value="10"/>
+            </Style>
+            <Style x:Key="TableHeaderLabel" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style x:Key="TableRowLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style x:Key="TableLinkLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextDecorations" Value="Underline"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AppMAUISample.ViewModels"
+             x:Class="AppMAUISample.Pages.LoginPage"
+             x:DataType="viewmodels:LoginViewModel"
+             Title="Sample App"
+             BackgroundColor="White">
+    <ContentPage.BindingContext>
+        <viewmodels:LoginViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout VerticalOptions="Center" Margin="10">
+        <Label Text="Login" HorizontalTextAlignment="Center"/>
+        <VerticalStackLayout Style="{StaticResource EntryStackStyle}">
+            <Label Text="Email" Style="{StaticResource EntryLabelStyle}" />
+            <Entry x:Name="txtEmail" Text="{Binding Email}" Placeholder="Email" />
+            <Label Text="{Binding EmailErrorText}" Style="{StaticResource InvalidEntryStyle}" IsVisible="{Binding HasErrorOnEmail}"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Style="{StaticResource EntryStackStyle}">
+            <Label Text="Password" Style="{StaticResource EntryLabelStyle}" />
+            <Entry x:Name="txtPassword" Text="{Binding Password}" Placeholder="Password" IsPassword="True" />
+            <Label Text="{Binding PasswordErrorText}" Style="{StaticResource InvalidEntryStyle}" IsVisible="{Binding HasErrorOnPassword}"/>
+        </VerticalStackLayout>
+        <Button Text="Login" WidthRequest="100" HorizontalOptions="End" Margin="10 0 0 0" Command="{Binding OnLoginClick}" />
+    </StackLayout>
+</ContentPage>

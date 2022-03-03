@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AppMAUISample.ViewModels"
+             x:Class="AppMAUISample.Pages.WelcomePage"
+             x:DataType="viewmodels:WelcomeViewModel"
+             Title="Sample App"
+             BackgroundColor="White">
+    <ContentPage.BindingContext>
+        <viewmodels:WelcomeViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding WelcomeMessage}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

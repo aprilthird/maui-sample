@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31611.283
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppMAUISample", "AppMAUISample\AppMAUISample.csproj", "{D284210E-D68C-4470-916C-80DC5626D09A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{346D92BA-1313-4F70-AF66-1DD98BFBE64A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiSample", "WebApiSample\WebApiSample.csproj", "{4BB62C21-7201-4402-B300-D84E7BBE1F21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D284210E-D68C-4470-916C-80DC5626D09A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D284210E-D68C-4470-916C-80DC5626D09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D284210E-D68C-4470-916C-80DC5626D09A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D284210E-D68C-4470-916C-80DC5626D09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D284210E-D68C-4470-916C-80DC5626D09A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D284210E-D68C-4470-916C-80DC5626D09A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{346D92BA-1313-4F70-AF66-1DD98BFBE64A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{346D92BA-1313-4F70-AF66-1DD98BFBE64A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{346D92BA-1313-4F70-AF66-1DD98BFBE64A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{346D92BA-1313-4F70-AF66-1DD98BFBE64A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB62C21-7201-4402-B300-D84E7BBE1F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB62C21-7201-4402-B300-D84E7BBE1F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB62C21-7201-4402-B300-D84E7BBE1F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB62C21-7201-4402-B300-D84E7BBE1F21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://jrojas21.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AppMAUISample\\AppMAUISample.csproj
+		SccProjectName1 = AppMAUISample
+		SccLocalPath1 = AppMAUISample
+		SccProjectUniqueName2 = Core\\Core.csproj
+		SccProjectName2 = Core
+		SccLocalPath2 = Core
+		SccProjectUniqueName3 = WebApiSample\\WebApiSample.csproj
+		SccProjectName3 = WebApiSample
+		SccLocalPath3 = WebApiSample
+	EndGlobalSection
+EndGlobal

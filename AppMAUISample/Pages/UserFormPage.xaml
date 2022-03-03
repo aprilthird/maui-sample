@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AppMAUISample.ViewModels"
+             x:Class="AppMAUISample.Pages.UserFormPage"
+             x:DataType="viewmodels:UserFormViewModel"
+             Title="User Form"
+             BackgroundColor="White">
+    <ContentPage.BindingContext>
+        <viewmodels:UserFormViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Margin="10">
+        <VerticalStackLayout Style="{StaticResource EntryStackStyle}">
+            <Label Text="Id" Style="{StaticResource EntryLabelStyle}" />
+            <Entry x:Name="txtId" Text="{Binding Id}" IsEnabled="False" />
+        </VerticalStackLayout>
+        <VerticalStackLayout Style="{StaticResource EntryStackStyle}">
+            <Label Text="Name" Style="{StaticResource EntryLabelStyle}" />
+            <Entry x:Name="txtName" Text="{Binding Name}" Placeholder="Name" />
+            <Label Text="{Binding NameErrorText}" Style="{StaticResource InvalidEntryStyle}" IsVisible="{Binding HasErrorOnName}"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Style="{StaticResource EntryStackStyle}">
+            <Label Text="Age" Style="{StaticResource EntryLabelStyle}" />
+            <Entry x:Name="txtAge" Text="{Binding Age}" Placeholder="Age" />
+            <Label Text="{Binding AgeErrorText}" Style="{StaticResource InvalidEntryStyle}" IsVisible="{Binding HasErrorOnAge}"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Style="{StaticResource EntryStackStyle}">
+            <Label Text="Birth Date" Style="{StaticResource EntryLabelStyle}" />
+            <DatePicker x:Name="dpBirthDate" Date="{Binding BirthDate}" HorizontalOptions="EndAndExpand" WidthRequest="200" />
+            <Label Text="{Binding BirthDateErrorText}" Style="{StaticResource InvalidEntryStyle}" IsVisible="{Binding HasErrorOnBirthDate}"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Style="{StaticResource EntryStackStyle}">
+            <Label Text="Email" Style="{StaticResource EntryLabelStyle}" />
+            <Entry x:Name="txtEmail" Text="{Binding Email}" Placeholder="Email" />
+            <Label Text="{Binding EmailErrorText}" Style="{StaticResource InvalidEntryStyle}" IsVisible="{Binding HasErrorOnEmail}"/>
+        </VerticalStackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Text="Cancel" Margin="0 10 0 10" Command="{Binding OnCancelClick}"/>
+            <Button Grid.Column="1" Text="Save" Margin="0 10 0 10" Command="{Binding OnSaveClick}" IsEnabled="{Binding IsNotBusy, Mode=OneWay}"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
